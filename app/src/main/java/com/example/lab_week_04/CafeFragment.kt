@@ -25,11 +25,13 @@ class CafeFragment : Fragment() {
         val viewPager = view.findViewById<ViewPager2>(R.id.view_pager)
         val tabLayout = view.findViewById<TabLayout>(R.id.tab_layout)
 
-        val adapter = CafeAdapter(childFragmentManager, lifecycle)
+        // Use requireActivity() which is a FragmentActivity context
+        val adapter = CafeAdapter(requireActivity()) // Corrected: removed lifecycle argument
         viewPager.adapter = adapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
-            tab.text = resources.getString(TABS_FIXED[position])
+            // Use TABS_CAFE_TITLES from CafeAdapter.kt (it's a top-level val)
+            tab.text = resources.getString(TABS_CAFE_TITLES[position])
         }.attach()
     }
 }

@@ -3,13 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CafeDetailFragment">
+    tools:context=".CafeDetailFragment"
+    android:background="@android:color/holo_blue_light"> <!-- ADDED A BRIGHT BACKGROUND FOR DEBUGGING -->
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Hello blank fragment" />
+        android:id="@+id/content_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="XML: WAITING FOR FRAGMENT"
+        android:textSize="18sp"
+        android:textColor="#E91E63" /> <!-- Distinct pink text color -->
 
 </FrameLayout>
